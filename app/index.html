@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Crowdfunding project Johnny</title>
+    <style type="text/css" media="screen">
+     * {
+       margin: 0; 
+       padding: 0;
+     }
+     div#main-content { 
+       padding-top: 10px;
+       margin-left: 10%;
+       margin-right: 10%;
+       margin-top: 1%;
+       font-family: "Open Sans", sans-serif;
+    }
+    </style>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <div id="main-content">
+  <img src="./images/ether4.jpg" style="width:1500px;height:273px;">
+  <p align="center"><b><span id="status"></span></b></p>
+  <br><br><h2>My Account overview</h2>
+  <br><table style="width:45%" id="accountoverview"></table>
+  <br><h2>Project overview</h2>
+  <br><table style="width:90%" id="projects"></table>
+  <br><br><h2>Fund a project</h2>
+  <br><label for="sender">To fund to a project, please fill in your account </label><input type="text" id="sender" placeholder="e.g.,0x8b94ed7b0c9804782705752ef3c28aa074442870"></input>
+  <label for="amountSend"> and amount in Wei </label><input type="text" id="amountSend" placeholder="e.g., 5000"></input> then press one of the 'Fund' buttons in the projects overview
+  <br><br><h2>Request a refund</h2>
+  <br><label for="retriever">To request a refund project, please fill in your account </label><input type="text" id="retriever" placeholder="e.g.,0x8b94ed7b0c9804782705752ef3c28aa074442870"></input> then press one of the 'refund' buttons in the projects overview.
+  <br><br><h2>Create a new project</h2>
+  <br><span>To create a new project, please fill in fields below and press </span><button id="create" onclick="createProject()">Create new project</button>
+  <br><br><label for="projectId">Project Id </label><input type="text" id="projectId" placeholder="e.g., 1"></input>
+  <br><br><label for="sender">Owner account </label><input type="text" id="ownerAccount" placeholder="e.g.,0x8b94ed7b0c9804782705752ef3c28aa074442870"></input>
+  <br><br><label for="amountNeeded">Amount needed (Wei) </label><input type="text" id="amountNeeded" placeholder="e.g., 95"></input> 
+  <br><br><label for="deadline">Deadline (hours) </label><input type="text" id="deadline" placeholder="e.g., 48"></input> 
+  </div>
+</body>
+</html>

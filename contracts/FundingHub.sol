@@ -60,12 +60,13 @@ contract FundingHub {
 		return ids.length;
 	}
 
-	function getProjectDetails(uint _id) public constant returns (uint, uint, uint, uint) {
+	function getProjectDetails(uint _id) public constant returns (uint, uint, uint, uint, uint) {
 		Project p = Project(projects[_id].projectAddress);
 		uint amountNeeded = p.getAmountNeeded();
 		uint deadline = p.getDeadline();
 		uint amountRaised = p.getAmountRaised();
-		return (_id, amountNeeded, deadline, amountRaised);
+		uint projectState = p.getProjectState();
+		return (_id, amountNeeded, deadline, amountRaised, projectState);
 	}
 
 }
